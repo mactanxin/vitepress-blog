@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Xin's Blog",
   description: "Xin's blog, focus on Vue, Svelte, Tailwind CSS",
+  srcDir: './markdown',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
