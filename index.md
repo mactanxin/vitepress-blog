@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Xin's Blog"
-  text: "Xin's blog, focus on Vue, Svelte, Tailwind CSS"
-  tagline: My great project tagline
+  text: "Welcome to my blog, everything about Vue, Svelte, Tailwind CSS"
+  tagline: My great blog starts here
   actions:
     - theme: brand
       text: Markdown Examples
