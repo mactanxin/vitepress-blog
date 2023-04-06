@@ -8,18 +8,18 @@ hero:
   tagline: My great blog starts here
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: About Me
+      link: /about-me
     - theme: alt
-      text: API Examples
+      text: Blog
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 2023
+    details: A quick link to all posts in 2023
+  - title: 2020
+    details: A quick link to all posts in 2020
+  - title: 2019
+    details: A quick link to all posts in 2019
 ---
 
