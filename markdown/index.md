@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Xin's Blog"
-  text: "Welcome to my blog, everything about Vue, Svelte, Tailwind CSS"
-  tagline: My great blog starts here
+  text: "Welcome to my blog"
+  tagline: I use Vue for work, Svelte for everything else 
   actions:
     - theme: brand
       text: About Me
