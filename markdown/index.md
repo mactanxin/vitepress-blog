@@ -18,9 +18,11 @@ features:
   - title: 2023
     details: Everything in 2023
     link: /2023/
-  - title: 2020/
+  - title: 2020
     details: Everything in in 2020
-  - title: 2019/
+    link: /2022/
+  - title: 2019
     details: Everything in 2019
+    link: /2019/
 ---
 
