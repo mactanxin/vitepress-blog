@@ -12,24 +12,24 @@ nr docs:dev
 
 
 ## Demo
-Demo website is over here: [vue-markdown-blog.netlify.com](https://vue-markdown-blog.netlify.com/)
+Demo website is over here: [On Netlify](https://tanx.in/)
 
 ## Project setup
 ```
-yarn install
+pnpm i
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+pnpm docs:dev
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+pnpm docs:build
 ```
 
-### Lints and fixes files
+### Preview
 ```
-yarn run lint
+pnpm docs:preview
 ```
