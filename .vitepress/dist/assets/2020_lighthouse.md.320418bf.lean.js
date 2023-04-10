@@ -1,0 +1,1 @@
+import{_ as e,o,c as a,N as r}from"./chunks/framework.7e203a6d.js";const f=JSON.parse('{"title":"使用Lighthouse 优化","description":"","frontmatter":{},"headers":[],"relativePath":"2020/lighthouse.md"}'),n={name:"2020/lighthouse.md"},s=r("",39),t=[s];function l(p,c,i,d,h,u){return o(),a("div",null,t)}const y=e(n,[["render",l]]);export{f as __pageData,y as default};

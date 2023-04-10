@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,N as p}from"./chunks/framework.7e203a6d.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"2023/convert-object-key-value.md"}'),l={name:"2023/convert-object-key-value.md"},o=p("",19),e=[o];function t(c,r,y,D,C,F){return a(),n("div",null,e)}const d=s(l,[["render",t]]);export{i as __pageData,d as default};

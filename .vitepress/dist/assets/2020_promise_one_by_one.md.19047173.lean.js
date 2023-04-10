@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,N as l}from"./chunks/framework.7e203a6d.js";const C=JSON.parse('{"title":"Promise 按顺序执行","description":"","frontmatter":{},"headers":[],"relativePath":"2020/promise_one_by_one.md"}'),p={name:"2020/promise_one_by_one.md"},o=l("",22),e=[o];function t(c,r,y,F,D,i){return n(),a("div",null,e)}const d=s(p,[["render",t]]);export{C as __pageData,d as default};

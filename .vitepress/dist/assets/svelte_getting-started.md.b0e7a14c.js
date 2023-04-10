@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a}from"./chunks/framework.7e203a6d.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"svelte/getting-started.md"}'),r={name:"svelte/getting-started.md"};function s(n,o,c,d,i,p){return e(),a("div")}const m=t(r,[["render",s]]);export{l as __pageData,m as default};

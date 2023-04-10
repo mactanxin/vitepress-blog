@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,N as l}from"./chunks/framework.7e203a6d.js";const i=JSON.parse('{"title":"解析Markdown的标题","description":"","frontmatter":{},"headers":[],"relativePath":"2020/translate-md.md"}'),p={name:"2020/translate-md.md"},o=l("",11),e=[o];function t(c,r,F,y,D,C){return n(),a("div",null,e)}const d=s(p,[["render",t]]);export{i as __pageData,d as default};

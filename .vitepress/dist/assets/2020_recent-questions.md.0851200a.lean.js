@@ -1,0 +1,1 @@
+import{_ as e,o,c as t,N as c}from"./chunks/framework.7e203a6d.js";const k=JSON.parse('{"title":"献丑了","description":"","frontmatter":{},"headers":[],"relativePath":"2020/recent-questions.md"}'),l={name:"2020/recent-questions.md"},i=c("",14),r=[i];function a(s,p,n,d,u,b){return o(),t("div",null,r)}const m=e(l,[["render",a]]);export{k as __pageData,m as default};

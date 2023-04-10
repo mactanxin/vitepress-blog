@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,N as o}from"./chunks/framework.7e203a6d.js";const C=JSON.parse('{"title":"JS中如何判断一个变量是数组","description":"","frontmatter":{},"headers":[],"relativePath":"2020/isArray.md"}'),l={name:"2020/isArray.md"},p=o("",7),e=[p];function r(t,c,y,D,F,i){return a(),n("div",null,e)}const d=s(l,[["render",r]]);export{C as __pageData,d as default};

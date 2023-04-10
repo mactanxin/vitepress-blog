@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,N as r}from"./chunks/framework.7e203a6d.js";const d=JSON.parse('{"title":"如何快速使用新分支覆盖老分支","description":"","frontmatter":{},"headers":[],"relativePath":"2020/git-merge-theirs.md"}'),a={name:"2020/git-merge-theirs.md"},i=r("",6),l=[i];function c(n,s,h,g,p,_){return t(),o("div",null,l)}const u=e(a,[["render",c]]);export{d as __pageData,u as default};
