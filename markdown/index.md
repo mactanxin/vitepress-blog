@@ -15,6 +15,9 @@ hero:
       link: /api-examples
 
 features:
+  - title: Svelte
+    details: Svelte & SvelteKit
+    link: /svelte/
   - title: 2023
     details: Everything in 2023
     link: /2023/
