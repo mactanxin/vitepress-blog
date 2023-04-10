@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,N as l}from"./chunks/framework.7e203a6d.js";const i=JSON.parse('{"title":"3、实现Watcher","description":"","frontmatter":{},"headers":[],"relativePath":"2020/vue-mvvm-p3.md"}'),p={name:"2020/vue-mvvm-p3.md"},o=l("",5),e=[o];function t(c,r,F,y,D,A){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{i as __pageData,d as default};

@@ -24,7 +24,7 @@ var md = `
 ```
 
 期望的结果是
-```text
+```txt
 [
   { hn: '1', title: 'a' },
   { hn: '1.1', title: 'bb' },

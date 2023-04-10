@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,N as l}from"./chunks/framework.7e203a6d.js";const i=JSON.parse('{"title":"自己动手实现一个 Array.flat() 方法","description":"","frontmatter":{},"headers":[],"relativePath":"2020/array-flat.md"}'),p={name:"2020/array-flat.md"},o=l("",7),t=[o];function e(r,c,y,C,D,F){return a(),n("div",null,t)}const d=s(p,[["render",e]]);export{i as __pageData,d as default};

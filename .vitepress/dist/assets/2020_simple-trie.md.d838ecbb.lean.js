@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,N as l}from"./chunks/framework.7e203a6d.js";const i=JSON.parse('{"title":"自己动手实现一个 Trie","description":"","frontmatter":{},"headers":[],"relativePath":"2020/simple-trie.md"}'),p={name:"2020/simple-trie.md"},o=l("",4),e=[o];function t(c,r,F,y,D,C){return n(),a("div",null,e)}const _=s(p,[["render",t]]);export{i as __pageData,_ as default};

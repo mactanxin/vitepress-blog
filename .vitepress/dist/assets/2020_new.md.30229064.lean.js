@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,N as l}from"./chunks/framework.7e203a6d.js";const C=JSON.parse('{"title":"如何实现一个 new 关键字","description":"","frontmatter":{},"headers":[],"relativePath":"2020/new.md"}'),o={name:"2020/new.md"},p=l("",2),e=[p];function t(c,r,y,F,i,D){return a(),n("div",null,e)}const _=s(o,[["render",t]]);export{C as __pageData,_ as default};

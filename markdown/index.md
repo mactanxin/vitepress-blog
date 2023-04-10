@@ -23,7 +23,7 @@ features:
     link: /2023/
   - title: 2020
     details: Everything in in 2020
-    link: /2022/
+    link: /2020/
   - title: 2019
     details: Everything in 2019
     link: /2019/

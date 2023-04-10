@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,N as l}from"./chunks/framework.7e203a6d.js";const C=JSON.parse('{"title":"自己动手系列之: 手写一个MVVM (Part 1)","description":"","frontmatter":{},"headers":[],"relativePath":"2020/vue-mvvm.md"}'),p={name:"2020/vue-mvvm.md"},o=l("",21),e=[o];function t(c,r,F,y,D,A){return a(),n("div",null,e)}const u=s(p,[["render",t]]);export{C as __pageData,u as default};

@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,N as l}from"./chunks/framework.7e203a6d.js";const A=JSON.parse('{"title":"如何比较两个数组是否相等","description":"","frontmatter":{},"headers":[],"relativePath":"2020/is-array-equal.md"}'),p={name:"2020/is-array-equal.md"},o=l("",8),e=[o];function t(c,r,y,F,D,C){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{A as __pageData,d as default};

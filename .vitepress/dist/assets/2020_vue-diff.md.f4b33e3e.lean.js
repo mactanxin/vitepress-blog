@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,N as l}from"./chunks/framework.7e203a6d.js";const i=JSON.parse('{"title":"虚拟DOM, 真实DOM, 与Vue中的diff算法","description":"","frontmatter":{},"headers":[],"relativePath":"2020/vue-diff.md"}'),o={name:"2020/vue-diff.md"},p=l("",55),e=[p];function t(c,r,y,F,D,C){return n(),a("div",null,e)}const d=s(o,[["render",t]]);export{i as __pageData,d as default};
