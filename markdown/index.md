@@ -5,14 +5,14 @@ layout: home
 hero:
   name: "Xin's Blog"
   text: "Welcome to my blog"
-  tagline: I use Vue for work, Svelte for everything else 
+  tagline: 🚧🚧 Under heavy construction 🚧🚧
   actions:
     - theme: brand
       text: About Me
       link: /about-me
     - theme: alt
       text: Blog
-      link: /api-examples
+      link: /archive
 
 features:
   - title: Svelte
