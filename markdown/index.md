@@ -19,14 +19,17 @@ features:
       src: ./svelte-logo.png
     title: Svelte
     link: /svelte/
-  - title: 2023
-    details: Everything in 2023
+  - icon: 
+      src: ./2023.avif
+    title: 2023
     link: /2023/
-  - title: 2020
-    details: Everything in in 2020
+  - icon: 
+      src: ./2020.jpg
+    title: 2020
     link: /2020/
-  - title: 2019
-    details: Everything in 2019
+  - icon: 
+      src: ./2019.jpg
+    title: 2019
     link: /2019/
 ---
 
