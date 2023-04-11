@@ -82,6 +82,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mactanxin/vitepress-blog' }
-    ]
+    ],
+
+    footer: {
+      message: 'Made with ❤️  by Xin',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/mactanxin">Xin</a>'
+    }
   }
 })
