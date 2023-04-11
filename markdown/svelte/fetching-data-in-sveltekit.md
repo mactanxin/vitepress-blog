@@ -52,7 +52,7 @@ export const load = (({ params }) => {
 
 
 
-```svelte
+```typescript
 import * as db from '$lib/server/database';
 import type { PageServerLoad } from './$types';
  
