@@ -15,8 +15,9 @@ hero:
       link: /archive
 
 features:
-  - title: Svelte
-    details: Svelte & SvelteKit
+  - icon: 
+      src: ./svelte-logo.png
+    title: Svelte
     link: /svelte/
   - title: 2023
     details: Everything in 2023
