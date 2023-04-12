@@ -134,3 +134,12 @@ export const load = (async ({ fetch }) => {
 
 
 
+
+
+## prefetch
+
+
+
+更进一步的优化, 可以在用户鼠标hover在某个链接上的时候就开始预加载.
+
+只要在对应的 `<a>` 标签上加上 `<a data-sveltekit-prefetch>` 属性. 这样只要在用户鼠标悬浮在连接上, 就可以prefetch数据, 然后渲染页面, 提升访问感受
