@@ -65,3 +65,72 @@ export const load = (async ({ params }) => {
 
 
 
+## Parallel loading
+
+
+
+这个部分在 [官方文档](https://kit.svelte.dev/docs/load#parallel-loading) 中被一笔带过了.
+
+在实际开发中,  如果在同一个 `load` 方法中有多个请求, 可能是下面这样的代码: 
+
+
+
+```typescript
+<script lang="ts">
+import type { PageServerLoad } from './$types';
+
+export const load = (async ({ fetch }) => {
+  const prodRes = await fetch('https://dummyjson.com/products')
+  const products = await prodRes.json()
+  
+  const userRes = await fetch('https://dummyjson.com/users')
+  const users= await userRes.json()
+  
+  return {
+    products,
+    users
+  }
+}) satisfies PageServerLoad;
+</script>
+```
+
+
+
+如果这样写, 就会产生两个按顺序执行的请求.
+
+
+
+如果是返回两个请求的方法, 就可以并发请求
+
+
+
+```typescript
+<script lang="ts">
+import type { PageServerLoad } from './$types';
+
+export const load = (async ({ fetch }) => {
+
+  function getProducts() {
+    const prodRes = await fetch('https://dummyjson.com/products')
+    const products = await prodRes.json()
+
+    return products
+  }
+
+  function getUsers() {
+    const userRes = await fetch('https://dummyjson.com/users')
+    const users= await userRes.json()
+
+    return users
+  }
+
+  return {
+    products: getProducts(),
+    users: getUsers()
+  }
+}) satisfies PageServerLoad;
+</script>
+```
+
+
+
