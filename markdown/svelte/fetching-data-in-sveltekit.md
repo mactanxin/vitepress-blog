@@ -100,9 +100,9 @@ export const load = (async ({ fetch }) => {
 
 
 
-如果是返回两个请求的方法, 就可以并发请求
+.如果两个请求之间是相互独立的, 那么返回两个请求的方法, 就可以并发请求
 
-
+改成下面的代码方式: 
 
 ```typescript
 <script lang="ts">
@@ -110,23 +110,23 @@ import type { PageServerLoad } from './$types';
 
 export const load = (async ({ fetch }) => {
 
-  function getProducts() {
-    const prodRes = await fetch('https://dummyjson.com/products')
-    const products = await prodRes.json()
+  function fetchProducts() {
+    const productRes = await fetch('https://dummyjson.com/products')
+    const productData = await productRes.json()
 
-    return products
+    return productData.products
   }
 
-  function getUsers() {
+  function fetchUsers() {
     const userRes = await fetch('https://dummyjson.com/users')
-    const users= await userRes.json()
+    const userData= await userRes.json()
 
-    return users
+    return userData.users
   }
 
   return {
-    products: getProducts(),
-    users: getUsers()
+    products: fetchProducts(),
+    users: fetchUsers()
   }
 }) satisfies PageServerLoad;
 </script>
