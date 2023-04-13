@@ -19,6 +19,7 @@ export default defineConfig({
           text: 'Svelte',
           items: [
             { text: 'Fetching Data in Sveltekit', link: '/svelte/fetching-data-in-sveltekit' },
+            { text: 'Pagination in Sveltekit', link: '/svelte/pagination-in-sveltekit' },
           ]
         },
         {
