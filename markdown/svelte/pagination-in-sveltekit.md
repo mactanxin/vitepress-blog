@@ -1,8 +1,8 @@
-# pagination on server
+# Pagination in Sveltekit
 
 
 
-普通的请求
+传统请求方式
 
 ```typescript
 let pageSize = 10
@@ -15,6 +15,12 @@ function fetchProducts() {
     return productData.products
 }
 ```
+
+
+
+使用SSR的话, 这种传统请求方式就要放在 `+page.ts` 中执行, 但是容易泄露 `API_KEY`. 可以改成纯服务端请求
+
+方法一: 
 
 
 
@@ -38,7 +44,6 @@ export const load = async ({ fetch, url }) => {
     }
     const res = await fetch(`${BASE_URL}/api/posts?populate=*`)
     const data = await res.json()
-    console.log('server: ', data.data)
     return data.data
 
   }
@@ -59,6 +64,7 @@ export const load = async ({ fetch, url }) => {
 
 ```svelte
 <script lang="ts">
+  import { page } from '$app/stores'
   // 首先暴露一个 data 属性, 接收来自 +page.server.ts 中的数据
   export let data;
   let posts = data.data;
@@ -67,9 +73,17 @@ export const load = async ({ fetch, url }) => {
   $: totalItems = posts.length;
   // 计算总页数
   $: totalPages = Math.ceil(totalItems / pageSize);
+  $: currentPage = (Number($page.url.searchParams.get('pageNum')) || 0) / pageSize
 </script>
 
 <nav>
+  {#each Array(totalPages) as _, index}
+  	<a href="/posts?limit={pageSize}&skip={pageSize * index}"
+       class={currentPage === index ? 'text-blue-600' : 'text-gray-800'}
+    >
+      {index + 1 }
+  	</a>
+  {/each}
 </nav>
 ```
 
