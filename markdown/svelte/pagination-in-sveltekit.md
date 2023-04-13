@@ -25,7 +25,6 @@ function fetchProducts() {
 import { BASE_URL } from "$env/static/private"
 import { error } from '@sveltejs/kit'
 
-console.log("BASE_URL", BASE_URL)
 export const load = async ({ fetch, url }) => {
 
   const pageSize = Number(url.searchParams.get('pageSize')) || 10;
@@ -50,5 +49,27 @@ export const load = async ({ fetch, url }) => {
 
 }
 
+```
+
+
+
+然后在 `+page.svelte`中:
+
+
+
+```svelte
+<script lang="ts">
+  // 首先暴露一个 data 属性, 接收来自 +page.server.ts 中的数据
+  export let data;
+  let posts = data.data;
+	let pageSize = 10;
+  // totalItems 也可以从接口获取
+  $: totalItems = posts.length;
+  // 计算总页数
+  $: totalPages = Math.ceil(totalItems / pageSize);
+</script>
+
+<nav>
+</nav>
 ```
 
