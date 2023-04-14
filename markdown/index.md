@@ -20,6 +20,10 @@ features:
     title: Svelte
     link: /svelte/
   - icon: 
+      src: ./vue-logo.png
+    title: Vue 
+    link: /vue/
+  - icon: 
       src: ./2023.avif
     title: 2023
     link: /2023/
