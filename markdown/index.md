@@ -19,10 +19,12 @@ features:
       src: ./svelte-logo.png
     title: Svelte
     link: /svelte/
+    details: 使用 Sveltekit 实战
   - icon: 
       src: ./vue-logo.png
     title: Vue 
     link: /vue/
+    details: Vue 个人理解
   - icon: 
       src: ./2023.avif
     title: 2023
@@ -31,9 +33,5 @@ features:
       src: ./2020.jpg
     title: 2020
     link: /2020/
-  - icon: 
-      src: ./2019.jpg
-    title: 2019
-    link: /2019/
 ---
 
