@@ -27,11 +27,7 @@ features:
     details: Vue 个人理解
   - icon: 
       src: ./2023.avif
-    title: 2023
-    link: /2023/
-  - icon: 
-      src: ./2020.jpg
-    title: 2020
-    link: /2020/
+    title: Archives
+    link: /archives/
 ---
 
