@@ -1,5 +1,9 @@
 import { defineConfig } from 'vitepress'
 
+const archived = [
+
+]
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Xin's Blog",
@@ -26,9 +30,7 @@ export default defineConfig({
           text: '其他',
           items: [
             { text: 'Vue', link: '/vue/' },
-            { text: '2023', link: '/2023/' },
-            { text: '2020', link: '/2020/' },
-            { text: '2019', link: '/2019/' },
+            { text: '归档', link: '/archives/' },
           ]
         },
       ],
@@ -43,19 +45,16 @@ export default defineConfig({
           text: '其他',
           items: [
             { text: 'Svelte', link: '/svelte/' },
-            { text: '2023', link: '/2023/' },
-            { text: '2020', link: '/2020/' },
-            { text: '2019', link: '/2019/' },
+            { text: '归档', link: '/archives/' },
           ]
         },
 
       ],
-      '/2023/': [
+      '/archives/': [
         {
-          text: '2023',
+          text: '归档',
           items: [
-            { text: '2023 索引', link: '/2023/' },
-            { text: '翻转对象', link: '/2023/convert-object-key-value' }
+            { text: '索引', link: '/archives/' },
           ]
         },
         {
@@ -63,34 +62,9 @@ export default defineConfig({
           items: [
             { text: 'Svelte', link: '/svelte/' },
             { text: 'Vue', link: '/vue/' },
-            { text: '2020', link: '/2020/' },
-            { text: '2019', link: '/2019/' },
-          ]
-        }
-      ],
-      '/2020/': [
-        {
-          text: '其他',
-          items: [
-            { text: 'Svelte', link: '/svelte/' },
-            { text: 'Vue', link: '/vue/' },
-            { text: '2023', link: '/2023/' },
-            { text: '2019', link: '/2019/' },
-          ]
-        }
-      ],
-      '/2019/': [
-        {
-          text: '其他',
-          items: [
-            { text: 'Svelte', link: '/svelte/' },
-            { text: 'Vue', link: '/vue/' },
-            { text: '2023', link: '/2023/' },
-            { text: '2020', link: '/2020/' },
           ]
         }
       ]
-
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mactanxin/vitepress-blog' }
