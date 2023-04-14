@@ -25,6 +25,7 @@ export default defineConfig({
         {
           text: '其他',
           items: [
+            { text: 'Vue', link: '/vue/' },
             { text: '2023', link: '/2023/' },
             { text: '2020', link: '/2020/' },
             { text: '2019', link: '/2019/' },
@@ -37,7 +38,17 @@ export default defineConfig({
           items: [
             { text: 'Ref', link: '/vue/ref-and-reactive.md' }
           ]
-        }
+        },
+        {
+          text: '其他',
+          items: [
+            { text: 'Svelte', link: '/svelte/' },
+            { text: '2023', link: '/2023/' },
+            { text: '2020', link: '/2020/' },
+            { text: '2019', link: '/2019/' },
+          ]
+        },
+
       ],
       '/2023/': [
         {
@@ -51,6 +62,7 @@ export default defineConfig({
           text: '其他',
           items: [
             { text: 'Svelte', link: '/svelte/' },
+            { text: 'Vue', link: '/vue/' },
             { text: '2020', link: '/2020/' },
             { text: '2019', link: '/2019/' },
           ]
@@ -61,6 +73,7 @@ export default defineConfig({
           text: '其他',
           items: [
             { text: 'Svelte', link: '/svelte/' },
+            { text: 'Vue', link: '/vue/' },
             { text: '2023', link: '/2023/' },
             { text: '2019', link: '/2019/' },
           ]
@@ -71,6 +84,7 @@ export default defineConfig({
           text: '其他',
           items: [
             { text: 'Svelte', link: '/svelte/' },
+            { text: 'Vue', link: '/vue/' },
             { text: '2023', link: '/2023/' },
             { text: '2020', link: '/2020/' },
           ]
@@ -78,17 +92,6 @@ export default defineConfig({
       ]
 
     },
-
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: '2023', link: '/2023/' },
-    //       { text: '2020', link: '/2020/' }
-    //     ]
-    //   }
-    // ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mactanxin/vitepress-blog' }
     ],
