@@ -31,6 +31,14 @@ export default defineConfig({
           ]
         },
       ],
+      '/vue/': [
+        {
+          text: 'Vue',
+          items: [
+            { text: 'Ref', link: '/vue/ref-and-reactive.md' }
+          ]
+        }
+      ],
       '/2023/': [
         {
           text: '2023',
