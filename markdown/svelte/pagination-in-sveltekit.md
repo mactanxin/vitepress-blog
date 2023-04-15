@@ -96,3 +96,35 @@ export const load = async ({ fetch, url }) => {
 上一种方式请求时url会带上大量searchParams, 现在更多的网站会在做url设计时提前规划好. 例如:
 
 `/news/1` 其实就代表了第一页的数据. 代价是牺牲了固定的pageSize, 当然也可以用其他方法设置
+
+
+
+在父级页面的 `+page.svelte`中这是url时,  引导用户到 `/news/` 或 `/news/1` 这样的页面去查看新闻.
+
+在 `news`  的 `+page.server.ts` 中, 请求后台数据
+
+
+
+```typescript
+export const load = async ({ fetch, params }) => {
+
+  const pageSize = 10;
+  const pageNum = Number(params.slug) || 1
+
+  const fetchNews = async (pageNum: number) => {
+    if (pageSize > 100) {
+      throw error(400, 'Bad Request')
+    }
+    const res = await fetch(`${BASE_URL}/api/posts?pageSize=${pageSize}&pageNum=${pageNum}`)
+    const data = await res.json()
+    return data.data
+
+  }
+
+  return {
+    data: fetchNews(pageNum)
+  }
+
+}
+```
+
