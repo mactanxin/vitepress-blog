@@ -2,6 +2,10 @@
 
 
 
+## 方式一
+
+
+
 传统请求方式
 
 ```typescript
@@ -126,5 +130,25 @@ export const load = async ({ fetch, params }) => {
   }
 
 }
+```
+
+
+
+之后`+page.svelte`中就是同样的使用方法了
+
+
+
+```svelte
+<script lang="ts">
+  export let data;
+  let posts = data.data;
+</script>
+
+{#each posts as post}
+  <div class="my-post-title">
+    {post.title}
+	</div>
+</div>
+{/each}
 ```
 
