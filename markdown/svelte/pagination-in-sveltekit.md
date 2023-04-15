@@ -87,3 +87,12 @@ export const load = async ({ fetch, url }) => {
 </nav>
 ```
 
+
+
+## 方式二 
+
+
+
+上一种方式请求时url会带上大量searchParams, 现在更多的网站会在做url设计时提前规划好. 例如:
+
+`/news/1` 其实就代表了第一页的数据. 代价是牺牲了固定的pageSize, 当然也可以用其他方法设置
