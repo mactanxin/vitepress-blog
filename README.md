@@ -13,6 +13,7 @@ nr docs:dev
 
 ## Demo
 Demo website is over here: [On Netlify](https://tanx.in/)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/822e5944-b162-48a6-b62b-b2b3d894e269/deploy-status)](https://app.netlify.com/sites/cheery-blini-1268ba/deploys)
 
 
