@@ -90,5 +90,74 @@ export const actions: Actions = {
 
 最简单的方式就是直接引入`sveltekit`自带的 `use:enhance` 指令.
 
+如果什么都不做, 默认的表单会继续提交, 但是现在**没有**页面刷新的动作了
+
+
+
+这时可以指定一个方法来处理表单提交的动作
+
+
+
+```svelte
+        <form
+          use:enhance={({ form, data, action, cancel }) => {
+            return async ({ result, update }) => {};
+          }}
+          method="POST"
+          action="?/create"
+          class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+        >
+
+```
+
+
+
+在这里有几个地方需要注意一下
+
+
+
+```javascript
+({ form, data, action, cancel }) => {
+  // 这里的以前在表单提交前执行
+  // 比如
+  console.log('form: ', form)
+  
+ 
+  return async ({ result, update }) => {
+    // 这里的代码会在submit之后执行
+    console.log('result: ', result)
+    if (result.type === 'success') {
+      form.reset()
+    }
+  };
+}
+```
+
+
+
+// todo: add an alert component, if form validation fails on server, return error, display alert
+
+
+
+```svelte
+{#if form?.error}
+	<Alert message={form?.message} />
+{/if}
+```
+
+
+
+如果这个时候再次提交, 及时故意写一个错误的表单也什么都不会显示. 因为这时的`use:enhance` 已经启用了,
+
+这时如果禁用浏览器的`javascript`, 使用传统表单提交, 就会显示错误信息.
+
+那么如何解决呢?
+
+
+
+## 处理异常
+
+
+
 
 
