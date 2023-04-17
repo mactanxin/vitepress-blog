@@ -29,5 +29,4 @@ features:
       src: ./2023.avif
     title: Archives
     link: /archives/
----
-
+    details: 🚀嗨, 谁还没年轻过呢
