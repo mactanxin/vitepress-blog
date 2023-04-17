@@ -68,3 +68,27 @@ export const actions: Actions = {
 
 
 
+### 在同一个页面处理多个form请求
+
+如果在同一个页面, 有多个form(比如删除), 那这时就要加入一些参数
+
+
+
+在上面的示例中, 每次form请求, 都会刷新页面, 这样的体验放在现在web中已经过时了. 虽然没有使用任何JavaScript(甚至fetch).
+
+现在大部分的新手可能甚至不会传统post表单了
+
+
+
+这时就可以引入progressive enhancement
+
+
+
+## Progressive enhancement
+
+
+
+最简单的方式就是直接引入`sveltekit`自带的 `use:enhance` 指令.
+
+
+
