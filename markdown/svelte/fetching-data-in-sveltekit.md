@@ -2,7 +2,7 @@
 
 
 
-[官方教程](https://kit.svelte.dev/docs/load) 使用 `load` 方法获取数据.
+普通请求: [官方教程](https://kit.svelte.dev/docs/load) 使用 `load` 方法获取数据.
 
 
 
