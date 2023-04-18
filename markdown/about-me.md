@@ -17,6 +17,6 @@ Personal hobby: [Svelte](https://svelte.dev) + [Sveltekit](https://kit.svelte.de
 
 ### Styling
 
-Plus [TailwindCSS](https://tailwindcss.com) for styling
+[TailwindCSS](https://tailwindcss.com) for styling
 
 
