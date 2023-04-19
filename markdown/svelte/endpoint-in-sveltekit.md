@@ -33,3 +33,26 @@
 </script>
 ```
 
+
+
+在 `src/` 的  `route` 文件夹中, 创建一个 `api/add/+server.ts` 文件, 
+
+```typescript
+// in +server.ts
+import { json } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
+
+export const POST = (async ({ request }) => {
+    const { a, b } = await request.json();
+    return json(a + b);
+}) satisfies RequestHandler;
+
+// 同理, 可以处理 GET 请求
+
+export const GET = (async ({ request }) => {
+  return new Response(JSON.stringify({message: 'hello'}), { status: 200 })
+}) satisfies RequestHandler;
+```
+
+
+
