@@ -24,6 +24,7 @@ export default defineConfig({
           items: [
             { text: 'Fetching Data in Sveltekit', link: '/svelte/fetching-data-in-sveltekit' },
             { text: 'Pagination in Sveltekit', link: '/svelte/pagination-in-sveltekit' },
+            { text: 'Endpoint in Sveltekit', link: '/svelte/endpoint-in-sveltekit' },
           ]
         },
         {
