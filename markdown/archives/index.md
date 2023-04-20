@@ -1,7 +1,7 @@
 # 历史归档
 
 
-
+[Partial keyframes are not supported in vuetify 3](./partial-keyframes-not-supported.md)
 
 
 ## JS
