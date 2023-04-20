@@ -1,6 +1,8 @@
 # Hello There 👋
 
-🚧 new blog in progress
+🚧 new blog in progress. 
+
+I often spend many hours solving a complex problem and have a terrible habit of forgetting to document how exactly I solved it. After a few months passed, I stumbled into the same situation again. Because I didn’t document it, I need to dedicate hours to solve it with the minimal amount of context I have from the previous attempt.
 
 ## Tech Stack
 

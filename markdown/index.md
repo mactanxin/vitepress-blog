@@ -5,7 +5,8 @@ layout: home
 hero:
   name: "Xin's Blog"
   text: "Welcome to my blog"
-  tagline: 🚧🚧 Under heavy construction 🚧🚧
+  tagline: This is a blog where I write about the things I learn. I hope that I am able to provide you with some value from my experiences.
+
   actions:
     - theme: brand
       text: About Me
