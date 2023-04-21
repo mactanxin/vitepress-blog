@@ -25,6 +25,8 @@ export default defineConfig({
             { text: 'Fetching Data in Sveltekit', link: '/svelte/fetching-data-in-sveltekit' },
             { text: 'Pagination in Sveltekit', link: '/svelte/pagination-in-sveltekit' },
             { text: 'Endpoint in Sveltekit', link: '/svelte/endpoint-in-sveltekit' },
+            { text: 'Forms and enhancement', link: '/svelte/forms-and-enhancement' },
+            { text: 'Form validation with zod', link: '/svelte/form-validation-with-zod' },
           ]
         },
         {
