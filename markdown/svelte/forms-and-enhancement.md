@@ -207,3 +207,6 @@ import { enhance, applyAction } from '$app/forms'
 
 
 
+但是这种方式, 使用传统的表单验证会非常影响效率. 我们可以使用 [Zod](https://zod.dev) 来验证表单.
+
+具体可以查看[这一篇](./form-validation-with-zod.md)
