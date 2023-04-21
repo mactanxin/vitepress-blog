@@ -99,20 +99,40 @@ export const actions: Actions = {
 
 
 ```svelte
-        <form
-          use:enhance={({ form, data, action, cancel }) => {
-            return async ({ result, update }) => {};
-          }}
-          method="POST"
-          action="?/create"
-          class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-        >
+<form
+  use:enhance={({ form, data, action, cancel }) => {
+    return async ({ result, update }) => {};
+  }}
+  method="POST"
+  action="?/create"
+  class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+>
 
 ```
 
 
 
-在这里有几个地方需要注意一下
+在这里有几个地方需要注意一下:
+
+这个的 `{form, data, action, cancel}` 对象, 可以分别获取到以下内容:
+
+```text
+form 是 form 表单元素
+data 是 FormData 对象
+action 是对应的 action对象, 包含URL, host, origin等信息
+cancel() 可以取消提交
+```
+
+
+
+在回调函数中的 `{result, update}`
+
+```
+result 是 提交结果对象
+update()
+```
+
+
 
 
 
@@ -157,7 +177,33 @@ export const actions: Actions = {
 
 ## 处理异常
 
+我们就需要在 `use:enhance`中加入处理
 
+```typescript
+import { enhance, applyAction } from '$app/forms'
+({ form, data, action, cancel }) => {
+  // 这里的以前在表单提交前执行
+  // 比如
+  console.log('form: ', form)
+  
+ 
+  return async ({ result, update }) => {
+    // 这里的代码会在submit之后执行
+    console.log('result: ', result)
+    if (result.type === 'success') {
+      form.reset()
+    }
+    
+    // ++++ 这里处理异常
+    if (resule.type === 'invalid') {
+      await applyAction(result)
+    }
+    // 最后需要执行 update()
+    // 否则load方法只会在页面加载时执行一次, 且不会再次处理表单请求
+    update()
+  };
+}
+```
 
 
 
