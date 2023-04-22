@@ -175,7 +175,7 @@ update()
 
 
 
-## 处理异常
+## Form 表单处理异常
 
 我们就需要在 `use:enhance`中加入处理
 
@@ -209,4 +209,7 @@ import { enhance, applyAction } from '$app/forms'
 
 但是这种方式, 使用传统的表单验证会非常影响效率. 我们可以使用 [Zod](https://zod.dev) 来验证表单.
 
-具体可以查看[这一篇](./form-validation-with-zod.md)
+具体可以查看[这一篇](./form-validation-with-zod.md) 和 [这一篇](./errors-handling.md)
+
+
+
