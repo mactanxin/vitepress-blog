@@ -22,14 +22,13 @@ let ChatGPT generate code for me
 
 
 
-### Read Context and write docstring
+### Read Context
 
 ![Inject](/context_mode.gif)
 
 
 
-###  Just code it
-
+### Inject and write code to file
 
 
 ![Auto coding](/inject_mode.gif)
