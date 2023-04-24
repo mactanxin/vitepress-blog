@@ -1,7 +1,8 @@
 # 历史归档
 
+[ChatGPT开发效率小工具](./chatgpt-at-work)
 
-[Partial keyframes are not supported in vuetify 3](./partial-keyframes-not-supported.md)
+[Partial keyframes are not supported in vuetify 3](./partial-keyframes-are-not-supported)
 
 
 ## JS
