@@ -116,7 +116,7 @@ export const actions: Actions = {
 
 这个的 `{form, data, action, cancel}` 对象, 可以分别获取到以下内容:
 
-```text
+```txt
 form 是 form 表单元素
 data 是 FormData 对象
 action 是对应的 action对象, 包含URL, host, origin等信息
