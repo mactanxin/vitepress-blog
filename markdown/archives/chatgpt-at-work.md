@@ -2,9 +2,11 @@
 
 
 
-## Better Coding
+## Better Coding with these tools
 
+[NeoAI for nvim](https://github.com/Bryley/neoai.nvim) 
 
+[OpenCommit](https://github.com/di-sukharev/opencommit)
 
 ### as a coding helper & docstring generator
 
@@ -49,6 +51,7 @@ use open-commit to generate commit messages and do the rest.
 
 
 How to be even more `productive` with ChatGPT
+> How to PUA an AI
 
 
 
