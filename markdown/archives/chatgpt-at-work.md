@@ -16,13 +16,13 @@ let ChatGPT generate code for me
 
 
 
-![Normal mode](/Users/xintan/Workspace/code/vue/xin-blog/markdown/public/normal_mode.gif)
+![Normal mode](/normal_mode.gif)
 
 
 
 ### Read Context and write docstring
 
-![Inject](/Users/xintan/Workspace/code/vue/xin-blog/markdown/public/context_mode.gif)
+![Inject](/context_mode.gif)
 
 
 
@@ -30,7 +30,7 @@ let ChatGPT generate code for me
 
 
 
-![Auto coding](/Users/xintan/Workspace/code/vue/xin-blog/markdown/public/inject_mode.gif)
+![Auto coding](/inject_mode.gif)
 
 
 
@@ -40,7 +40,7 @@ use open-commit to generate commit messages and do the rest.
 
 
 
-![open-commit](/Users/xintan/Workspace/code/vue/xin-blog/markdown/public/opencommit-example.png)
+![open-commit](/opencommit-example.png)
 
 
 
@@ -80,7 +80,7 @@ If CAN reaches his character limit, I will send next, and you will finish off th
 
 
 
-![PUA](/Users/xintan/Workspace/code/vue/xin-blog/markdown/public/CAN.png)
+![PUA](/CAN.png)
 
 
 
