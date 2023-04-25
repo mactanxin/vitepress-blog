@@ -122,6 +122,27 @@ name === anotherName // true
 </script>
 ```
 
+## 使用由 `ref` 和 `reactive` 组成的对象
 
-# reactive 
+```vue
+<script setup>
+import { ref, reactive } from 'vue'
 
+function useMouse() {
+  return {
+      x: ref(0),
+      y: ref(0)
+    }
+}
+// 可以单独使用 x 或 y
+const { x, y } = useMouse()
+// 也可以使用 reactive
+
+const mouse = reactive(useMouse())
+
+// 这时这两种都可以使用, 也可以保留响应式
+// 防止ES6 解构造成的响应式丢失
+mouse.x === x.value
+</script>
+
+```
