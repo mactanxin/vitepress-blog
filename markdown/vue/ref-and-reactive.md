@@ -39,6 +39,41 @@ watch(counter, count => {
 </template>
 ```
 
+甚至可以用`reactive`再包一层:
+
+```vuejs
+const name = ref('zhangsan')
+
+const user = reactive({
+  name,
+  age: 18
+})
+
+// 这时可以操作 user.name, 不在需要 user.name.value
+user.name // zhangsan
+```
+
+## unref
+这个在业务组件用到的不太多,  功能性组件更多一点.
+因为可以在接收到一个未知类型的数据时候, 直接`unref(whatEverThisIs)`
+
+大概得实现就是
+```typescript
+function unref<T>(r: Ref<T> | T): T {
+  return isRef(r) ? r.value : r
+}
+```
+
+实际使用的时候就无脑`unref`
+
+```typescript
+import { ref, unref } from 'vue'
+
+function myTool(whatEverThisIs: any) {
+  return unref(whatEverThisIs)
+}
+```
+
 一些更深的思考比如: 
 
 ```vuejs
