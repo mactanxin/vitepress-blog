@@ -20,6 +20,8 @@ console.log(users.value)
 1. 显示调用, 有明确的类型检查.
 2. 想必`reactive`的局限更少
 
+## 如何解决呢?
+
 在使用`watch`直接接受`ref`作为监听对象, 并在回调函数中返回解包后的值
 
 ```vue
@@ -89,10 +91,23 @@ export function useTimeAgo(
 ## 将 `ref` 绑定一个已有的 `ref`
 
 ```vue
+import { ref, computed } from 'vue'
+import { useTitle } from '@vueuse/core'
 
+const name = ref('Hello')
+const title = computed(() => {
+  return `${name.value} my friend`
+})
+
+// 这时绑定
+useTitle(title) // Hello my friend
+
+name.value = `hi` // hi my friend
 ```
 
-一些更深的思考比如: 
+## 如果重复使用已有的`ref`会发生什么呢?
+
+它会原样返回
 
 ```vue
 <script setup>
@@ -101,6 +116,8 @@ import { ref, reactive } from 'vue'
 const name = ref('zhangsan')
 // 这时 如果使用下面的操作, 会发生什么呢?
 const anotherName = ref(name)
+
+name === anotherName // true
 
 </script>
 ```
