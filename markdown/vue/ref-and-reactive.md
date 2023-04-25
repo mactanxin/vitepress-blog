@@ -22,7 +22,7 @@ console.log(users.value)
 
 在使用`watch`直接接受`ref`作为监听对象, 并在回调函数中返回解包后的值
 
-```vuejs
+```vue
 const counter = ref(0)
 
 watch(counter, count => {
@@ -33,7 +33,7 @@ watch(counter, count => {
 
 以及可以在模板中自动解包
 
-```vuejs
+```vue
 <template>
   <button @click="counter += 1">Counter is {{ counter }}</button>
 </template>
@@ -41,7 +41,7 @@ watch(counter, count => {
 
 甚至可以用`reactive`再包一层:
 
-```vuejs
+```vue
 const name = ref('zhangsan')
 
 const user = reactive({
@@ -74,9 +74,27 @@ function myTool(whatEverThisIs: any) {
 }
 ```
 
+# 使用`MaybeRef`类型简化开发
+
+```typescript
+type MaybeRef<T> = T | Ref<T>
+
+export function useTimeAgo(
+  time: MaybeRef<Date | number | string>,
+) {
+  return computed(() => someFormatting(unref(time)))
+}
+```
+
+## 将 `ref` 绑定一个已有的 `ref`
+
+```vue
+
+```
+
 一些更深的思考比如: 
 
-```vuejs
+```vue
 <script setup>
 import { ref, reactive } from 'vue'
 
