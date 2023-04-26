@@ -25,12 +25,14 @@ console.log(users.value)
 在使用`watch`直接接受`ref`作为监听对象, 并在回调函数中返回解包后的值
 
 ```vue
+<script setup>
 const counter = ref(0)
 
 watch(counter, count => {
   // 这时的 count 已经解包, 不再需要 `.value`
   console.log(count) 
 })
+</script>
 ```
 
 以及可以在模板中自动解包
@@ -44,6 +46,7 @@ watch(counter, count => {
 甚至可以用`reactive`再包一层:
 
 ```vue
+<script setup>
 const name = ref('zhangsan')
 
 const user = reactive({
@@ -53,6 +56,7 @@ const user = reactive({
 
 // 这时可以操作 user.name, 不在需要 user.name.value
 user.name // zhangsan
+</script>
 ```
 
 ## unref
