@@ -90,7 +90,7 @@ export function useTimeAgo(
 
 ## 将 `ref` 绑定一个已有的 `ref`
 
-```vue
+```typescript
 import { ref, computed } from 'vue'
 import { useTitle } from '@vueuse/core'
 
