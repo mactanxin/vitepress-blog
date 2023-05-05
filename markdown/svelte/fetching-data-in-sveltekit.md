@@ -1,6 +1,6 @@
 # 在SvelteKit中获取数据
 
-[项目代码](https://github.com/mactanxin/sveltekit-dummyjson-demo/tree/main/src/routes/products)
+> update: [项目代码](https://github.com/mactanxin/sveltekit-dummyjson-demo/tree/main/src/routes/products)
 
 普通请求: [官方教程](https://kit.svelte.dev/docs/load) 使用 `load` 方法获取数据.
 
