@@ -7,12 +7,15 @@
 
 [Getting Started](./getting-started.md)
 
-[fetching-data-in-sveltekit](./fetching-data-in-sveltekit.md)
+常见的数据请求, 如何在服务端及客户端获取数据, 渲染到页面
+
+> [fetching-data-in-sveltekit](./fetching-data-in-sveltekit.md)
 
 [pagination-in-sveltekit](./pagination-in-sveltekit.md)
 
 [endpoint-in-sveltekit](./endpoint-in-sveltekit.md)
 
-[Progressive enhancement for forms](./forms-and-enhancement.md)
+表单处理及优化体验的页面内提交
+> [Progressive enhancement for forms](./forms-and-enhancement.md)
 
-[Form validation](./form-validation-with-zod.md)
+[Form validation](./form-validation-with-zod.md)o
