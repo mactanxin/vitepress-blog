@@ -4,6 +4,8 @@
 
 关于如何在sveltekit 中使用 form表单, 以及progresive enhancement
 
+> update: [demo code](https://github.com/mactanxin/sveltekit-dummyjson-demo/tree/main/src/routes/contact)
+
 
 
 首先还是构建一个传统的`form` 表单
