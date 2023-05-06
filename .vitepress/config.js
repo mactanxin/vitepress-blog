@@ -1,7 +1,10 @@
-import { defineConfig } from 'vitepress'
-
+import { createContentLoader, defineConfig } from 'vitepress'
+import { SitemapStream } from 'sitemap'
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lastUpdated: true,
   head: [
     [
       'script',
@@ -87,5 +90,22 @@ export default defineConfig({
       message: 'Made with ❤️  by Xin',
       copyright: 'Copyright © 2019-present <a href="https://github.com/mactanxin">Xin</a>'
     }
+  },
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({ hostname: 'https://tanx.in/' })
+    const pages = await createContentLoader('*.md').load()
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+
+    sitemap.pipe(writeStream)
+    pages.forEach((page) => sitemap.write(
+      page.url
+        // Strip `index.html` from URL
+        .replace(/index$/g, '')
+      // Optional: if Markdown files are located in a subfolder
+      // .replace(/^\/docs/, '')
+    ))
+    sitemap.end()
+
+    await new Promise((r) => writeStream.on('finish', r))
   }
 })
