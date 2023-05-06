@@ -20,14 +20,14 @@ features:
       src: ./svelte-logo.png
     title: Svelte
     link: /svelte/
-    details: 使用 Sveltekit 实战
+    details: Sveltekit in real life experiences
   - icon: 
       src: ./vue-logo.png
     title: Vue 
     link: /vue/
-    details: Vue 个人理解
+    details: Vue, ref, reactive and more
   - icon: 
       src: ./2023.avif
     title: Archives
     link: /archives/
-    details: 🚀嗨, 谁还没年轻过呢
+    details: 🚀 Everything else
