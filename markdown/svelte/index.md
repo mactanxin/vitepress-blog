@@ -1,6 +1,6 @@
 # svelte & sveltekit
 
-一些关于使用`sveltekit`实际开发中总结的内容.
+一些关于使用`sveltekit`实际开发中总结的内容.  
 [项目源码在这里](https://github.com/mactanxin/sveltekit-dummyjson-demo)
 
 还在逐渐更新中
@@ -21,4 +21,4 @@
 > [Progressive enhancement for forms](./forms-and-enhancement.md)
 
 🚧🚧🚧 使用Zod 进行表单验证
-> [Form validation](./form-validation-with-zod.md)o
+> [Form validation](./form-validation-with-zod.md)
