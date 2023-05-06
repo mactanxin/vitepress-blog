@@ -1,11 +1,21 @@
 import { defineConfig } from 'vitepress'
 
-const archived = [
-
-]
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: [
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-85K7LK4QKE'
+      }
+    ],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-85K7LK4QKE');"
+    ]
+  ],
   title: "Xin's Blog",
   description: "Xin's blog, focus on Vue, Svelte, Tailwind CSS",
   srcDir: './markdown',
