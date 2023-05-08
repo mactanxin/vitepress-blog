@@ -74,13 +74,11 @@ export const actions: Actions = {
 
 
 
-在上面的示例中, 每次form请求, 都会刷新页面, 这样的体验放在现在web中已经过时了. 虽然没有使用任何JavaScript(甚至fetch).
+在上面的示例中, 每次form请求, 都会刷新页面, 这样的体验放在现在web中已经过时了. 虽然没有使用任何JavaScript(甚至`fetch`).
 
-现在大部分的新手可能甚至不会传统post表单了
+> 现在大部分的新手可能甚至不会传统post表单了
 
-
-
-这时就可以引入progressive enhancement
+这时就可以引入 **progressive enhancement**
 
 
 
