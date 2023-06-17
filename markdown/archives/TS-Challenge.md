@@ -6,7 +6,7 @@
 
 4. 实现 `Pick`
 
-   ```
+   ```typescript
    type MyPick<T, K> = {
    	[k in K]: T[k]
    }
@@ -65,6 +65,14 @@
 
      ```typescript
      type If<C, T, F> = C extends true ? T : F
+     ```
+
+     
+
+533. 实现`Concat`
+
+     ```typescript
+     type Concat<T extends readonly any[], U extends readonly any[]> = [...T, ...U]
      ```
 
      
