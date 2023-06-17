@@ -100,5 +100,37 @@
 
      
 
+3057. 实现`push`
 
+      ```typescript
+      type Push<T extends any[], U> = [...T, U]
+      
+      /* _____________ 测试用例 _____________ */
+      import type { Equal, Expect } from '@type-challenges/utils'
+      
+      type cases = [
+        Expect<Equal<Push<[], 1>, [1]>>,
+        Expect<Equal<Push<[1, 2], '3'>, [1, 2, '3']>>,
+        Expect<Equal<Push<['1', 2, '3'], boolean>, ['1', 2, '3', boolean]>>,
+      ]
+      ```
 
+      
+
+3060. 实现`unshift`
+
+      ```typescript
+      
+      type Unshift<T extends any[], U> = [U, ...T]
+      
+      /* _____________ 测试用例 _____________ */
+      import type { Equal, Expect } from '@type-challenges/utils'
+      
+      type cases = [
+        Expect<Equal<Unshift<[], 1>, [1]>>,
+        Expect<Equal<Unshift<[1, 2], 0>, [0, 1, 2]>>,
+        Expect<Equal<Unshift<['1', 2, '3'], boolean>, [boolean, '1', 2, '3']>>,
+      ]
+      ```
+
+      
