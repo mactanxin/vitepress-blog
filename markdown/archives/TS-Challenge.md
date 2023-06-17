@@ -76,3 +76,29 @@
      ```
 
      
+
+     实现`Equals`
+
+     ```typescript
+     type Equals<X, Y> =
+         (<T>() => T extends X ? 1 : 2) extends
+         (<T>() => T extends Y ? 1 : 2) ? true : false;
+     ```
+
+
+
+898. 实现`Includes`
+
+     ```typescript
+     type Includes<Value extends any[], Item> =
+     	Equals<Value[0], Item> extends true
+     		? true
+     		: Value extends [Value[0], ...infer rest]
+     			? Includes<rest, Item>
+     			: false;
+     ```
+
+     
+
+
+
