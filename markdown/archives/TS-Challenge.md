@@ -300,3 +300,51 @@
     ```
 
     
+
+16. 实现`Pop`
+
+    ```typescript
+    type Pop<T extends any[]> = T extends [...infer U, any] ? U : never
+    
+    /* _____________ 测试用例 _____________ */
+    import type { Equal, Expect } from '@type-challenges/utils'
+    
+    type cases = [
+      Expect<Equal<Pop<[3, 2, 1]>, [3, 2]>>,
+      Expect<Equal<Pop<['a', 'b', 'c', 'd']>, ['a', 'b', 'c']>>,
+      Expect<Equal<Pop<[]>, []>>,
+    ]
+    ```
+
+    一些举一反三
+
+    ```typescript
+    type Push<T extends unknown[], U> = [...T, U]
+    type Shift<T extends unknown[]> = T extends [unknown, ...infer U] ? U : never
+    type Unshift<T extends unknown[], U> = [U, ...T]
+    ```
+
+20. 实现`Promise.all`
+
+    ```typescript
+    declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{
+      [key in keyof T]: Awaited<T[key]>
+    }>
+    
+    /* _____________ 测试用例 _____________ */
+    import type { Equal, Expect } from '@type-challenges/utils'
+    
+    const promiseAllTest1 = PromiseAll([1, 2, 3] as const)
+    const promiseAllTest2 = PromiseAll([1, 2, Promise.resolve(3)] as const)
+    const promiseAllTest3 = PromiseAll([1, 2, Promise.resolve(3)])
+    const promiseAllTest4 = PromiseAll<Array<number | Promise<number>>>([1, 2, 3])
+    
+    type cases = [
+      Expect<Equal<typeof promiseAllTest1, Promise<[1, 2, 3]>>>,
+      Expect<Equal<typeof promiseAllTest2, Promise<[1, 2, number]>>>,
+      Expect<Equal<typeof promiseAllTest3, Promise<[number, number, number]>>>,
+      Expect<Equal<typeof promiseAllTest4, Promise<number[]>>>,
+    ]
+    ```
+
+    
