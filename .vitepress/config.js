@@ -40,6 +40,7 @@ export default defineConfig({
             { text: 'Endpoint in Sveltekit', link: '/svelte/endpoint-in-sveltekit' },
             { text: 'Forms and enhancement', link: '/svelte/forms-and-enhancement' },
             { text: 'Form validation with zod', link: '/svelte/form-validation-with-zod' },
+            { text: 'Grouped Layout', link: '/svelte/advanced-layout' },
           ]
         },
         {
