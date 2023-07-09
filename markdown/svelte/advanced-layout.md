@@ -63,3 +63,28 @@ routes
 然后再次访问 `/quotes/` 或者 `/admin` 的时候, 就会根据不同的路由显示不同的布局了  
 
 
+
+## +page@
+
+如果需要针对某一个页面(aka 路由)单独设置布局, 比如想要重置 `(app)/quotes/tags/+page`
+
+那么可以这样写
+
+```
+routes
+├── (app)
+│   └── quotes
+│       ├── id
+│       │   └── ...
+│       ├── tags
+│       │   └── +page@(app).svelte
+│       ├── +layout.svelte
+│       └── +page.svelte
+├── (dashboard)
+│   └── admin
+│       ├── +layout.svelte
+│       ├── +page.server.ts
+│       └── +page.svelte
+└── +layout.svelte
+```
+
