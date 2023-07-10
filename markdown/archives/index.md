@@ -1,4 +1,7 @@
 # 历史归档
+
+[实战中总计的TS小技巧 Part 1](./TS-in-reallife.md)
+
 [TypeScript 体操](./TS-Challenge.md)
 
 [ChatGPT开发效率小工具](./chatgpt-at-work)
@@ -17,8 +20,6 @@
 [JS中如何判断一个变量是数组](./isArray)
 
 [Promise 按顺序执行](./promise_one_by_one)
-
-[]()
 
 
 
