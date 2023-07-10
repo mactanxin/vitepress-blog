@@ -36,5 +36,8 @@ type Person = {
 需要自己实现一个:
 
 ```typescript
-type UnionOmit<T, K extends string | number | symbol> = T extends unknown ? Omit<T, K> : never
+type UnionOmit<T, K extends string | number | symbol> = 
+    T extends unknown 
+    ? Omit<T, K> 
+    : never
 ```
