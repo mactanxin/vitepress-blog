@@ -1,5 +1,7 @@
 # 历史归档
 
+[Introducing using in TypeScript 5.2](./using-keyword.md)
+
 [实战中总计的TS小技巧 Part 1](./TS-in-reallife.md)
 
 [TypeScript 体操](./TS-Challenge.md)
