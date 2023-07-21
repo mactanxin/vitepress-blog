@@ -1,4 +1,5 @@
 # 历史归档
+[Advanced TS P1]('./Advanced-TypeScript-Exercises.md')
 
 [Introducing using in TypeScript 5.2](./using-keyword.md)
 
