@@ -1,8 +1,9 @@
 # Advanced TypeScript Exercises
 
-If we have a type which is wrapped type like Promise. How we can get a type which is inside the wrapped type? For example if we have Promise<ExampleType> how to get ExampleType?
+If we have a type which is wrapped type like Promise. How we can get a type which is inside the wrapped type? For example if we have `Promise<ExampleType>` how to get ExampleType?
 
-Take a look at below code. Write an utility type Transform which will take a generic type argument, and if it is a Promise it will evaluate to the type inside it.
+Take a look at below code. 
+Write an utility type Transform which will take a generic type argument, and if it is a Promise it will evaluate to the type inside it.
 
 ```typescript
 type X = Promise<string>
