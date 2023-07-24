@@ -60,7 +60,7 @@ content-visibility: auto;
 
 效果如下：
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a49b78bccc1b41acbeff2b76c24f7fa1~tplv-k3u1fbpfcp-zoom-1.image)
+![img](./image-1.jpg)
 
 
 
@@ -74,7 +74,7 @@ OK，没有问题，接下来，我们给其中的 `.hidden` 设置 `content-vis
 
 效果如下：
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/04a0c0a59b9341a1bdefc7eff00db35a~tplv-k3u1fbpfcp-zoom-1.image)
+![img](./image-2.jpg)
 
 注意，仔细看效果，这里添加了 `content-visibility: hidden` 之后，**消失的只是添加了该元素的 div 的子元素消失不见，而父元素本身及其样式，还是存在页面上的**。
 
