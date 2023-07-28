@@ -55,6 +55,13 @@ export type BaseProps = {
 ```vue
 <script setup lang="ts" generic="T extends string | number, U extends Item">
   import type { Item } from './dummy-types'
+  
+  defineProps<{
+    id: T
+    list: U[]
+  }>()
 </script>
 ```
+
+
 
