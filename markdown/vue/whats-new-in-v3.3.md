@@ -65,3 +65,39 @@ export type BaseProps = {
 
 
 
+### 更好的 `defineEmits`
+
+`3.3` 之前的 `defineEmits` 也还行, 但是新版中更直观了
+
+
+
+```vue
+<script setup lang="ts">
+const emit = defineEmits<{
+  foo: [id: number]
+  bar: [name: string, ...rest: any[]]
+}>()
+</script>
+```
+
+
+
+
+
+### 具有类型的 `slots` 来啦
+
+
+
+现在的 `defineSlots` 可以声明类型了
+
+
+
+```vue
+<script setup lang="ts">
+defineSlots<{
+  default?: (props: { msg: string }) => any
+  item?: (props: {id: number}) => any
+}>()
+</script>
+```
+
