@@ -101,3 +101,16 @@ defineSlots<{
 </script>
 ```
 
+
+
+### 带有响应式的对象结构
+
+```vue
+<script setup lang="ts">
+
+  const { msg = 'hello' } = defineProps<{
+    msg: string
+  }>()
+</script>
+```
+
