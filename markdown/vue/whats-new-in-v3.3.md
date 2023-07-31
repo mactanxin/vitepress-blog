@@ -24,7 +24,7 @@ export type BaseProps = {
 ```vue
 <script setup lang="ts">
   import type { BaseProps } from './types'
-  
+  //    👇已经自动解构,             👇🏻简单组合式类型 
   const { msg, baseId } = defineProps<BaseProps & { msg: string }>()
 </script>
 ```
