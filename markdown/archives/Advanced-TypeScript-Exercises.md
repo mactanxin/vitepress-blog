@@ -101,3 +101,39 @@ function makeCustomer<T extends User>(u: T): T {
   }
 }
 ```
+
+
+
+# Part 3
+
+## 同步参数类型
+
+Today's question is about typing function with two arguments being union type. The goal is to block possibility to pass mixed types into arguments, so if the first argument is a `number` then second also needs to be `number`, in other words there is dependency between arguments which we need to write.
+
+```typescript
+function f(a: string | number, b: string | number) {
+    if (typeof a === 'string') {
+        return a + ':' + b; // no error but b can be number!
+    } else {
+        return a + b; // error as b can be number | string
+    }
+}
+f(2, 3); // correct usage
+f(1, 'a'); // should be error
+f('a', 2); // should be error
+f('a', 'b') // correct usage
+```
+
+
+
+解法一最简单:
+
+
+
+```typescript
+function f(T extends string | number)(a: T, b: T) {
+}
+```
+
+
+
