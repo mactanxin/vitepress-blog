@@ -509,3 +509,21 @@
       ```
 
       
+
+223. `IsAny`
+
+     ```typescript
+     type IsAny<T> = Equal<T, any>
+     /* _____________ Test Cases _____________ */
+     import type { Equal, Expect } from '@type-challenges/utils'
+     
+     type cases = [
+       Expect<Equal<IsAny<any>, true>>,
+     
+       Expect<Equal<IsAny<undefined>, false>>,
+       Expect<Equal<IsAny<unknown>, false>>,
+       Expect<Equal<IsAny<never>, false>>,
+       E
+     ```
+
+     
