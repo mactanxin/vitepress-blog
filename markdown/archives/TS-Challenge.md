@@ -527,3 +527,32 @@
      ```
 
      
+
+
+
+529. `Absolute`
+
+     核心解法是，是将 T 转换为字符串，然后检查字符串前面是否有 `-`。 如果有，则返回 `-` 之后的字符串，否则返回已转换为字符串的 T。
+
+     ```typescript
+     
+     type Absolute<T extends number | string | bigint> = `${T}` extends `-${infer U}` ? U : `${T}`
+     
+     /* _____________ 测试用例 _____________ */
+     import type { Equal, Expect } from '@type-challenges/utils'
+     
+     type cases = [
+       Expect<Equal<Absolute<0>, '0'>>,
+       Expect<Equal<Absolute<-0>, '0'>>,
+       Expect<Equal<Absolute<10>, '10'>>,
+       Expect<Equal<Absolute<-5>, '5'>>,
+       Expect<Equal<Absolute<'0'>, '0'>>,
+       Expect<Equal<Absolute<'-0'>, '0'>>,
+       Expect<Equal<Absolute<'10'>, '10'>>,
+       Expect<Equal<Absolute<'-5'>, '5'>>,
+       Expect<Equal<Absolute<-1_000_000n>, '1000000'>>,
+       Expect<Equal<Absolute<9_999n>, '9999'>>,
+     ]
+     ```
+
+     
