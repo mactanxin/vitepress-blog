@@ -10,6 +10,7 @@ type Person = {
     name: string;
     age: number;
     gender: 'male' | 'female';
+}
 ```
 
 这时如果 `gener` 是 `male` 的话, 需要新增一个 `strength` 属性,
