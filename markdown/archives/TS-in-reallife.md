@@ -72,7 +72,7 @@ const goToRoute = (route: "/" | "/about") => {};
 可以使用
 
 ```typescript
-const goToRoute = (route: keyof routes) => {};
+const goToRoute = (route: "/" | "/about") => {};
 ```
 
 ### 解决方式
@@ -86,3 +86,111 @@ const routes = {
 ```
 
 这样就可以使用 `goToRoute(routes.admin)` 了
+
+
+
+### Object.freeze?
+
+用 `Object.freeze`呢?
+
+
+
+```typescript
+const routes = Object.freeze({
+    home: '/',
+    about: '/'
+})
+```
+
+
+
+针对单层对象可以, 但是`Object.freeze`不会处理深层的属性, 例如:
+
+
+
+```typescript
+const routes = Object.freeze({
+    home: '/',
+    about: '/',
+    deep: {
+      name: '/deep'
+    }
+})
+
+// 这一行不会报错
+routes.deep.name = '/hello'
+```
+
+
+
+### 获取 const 的值
+
+```typescript
+const routes = {
+    home: '/',
+    about: '/about',
+    user: '/user'
+} as const	
+```
+
+
+
+
+
+这时可以定义一个:
+
+
+
+```typescript
+type TypeOfRoutes = typeof routes;
+```
+
+此时 `TypeOfRoutes`的值就是变成了:
+
+
+
+```typescript
+const routes = {
+    home: '/',
+    about: '/about',
+    user: '/user'
+} as const
+
+type TypeOfRoutes = typeof routes;
+
+type Routes = (typeof routes)[keyof typeof routes]
+
+/* _____________ Further Steps _____________ */
+/*
+  > Share your solutions: https://tsch.js.org/1367/answer
+  > View solutions: https://tsch.js.org/1367/solutions
+  > More Challenges: https://tsch.js.org
+*/
+
+type TypeOfRoutes = {
+    readonly home: "/";
+    readonly about: "/about";
+    readonly user: "/user";
+}
+```
+
+
+
+再从 `TypeOfRoutes`中提取实际的`value`
+
+
+
+```typescript
+type Routes = (typeof routes)[keyof typeof routes]
+```
+
+
+
+那么 `Routes`就变成了 ` "/" | "/about" | "/user"`, 就可以直接使用这个type了
+
+
+
+```typescript
+const goToRoute = (route: Route) => {}```
+```
+
