@@ -42,3 +42,47 @@ type UnionOmit<T, K extends string | number | symbol> =
     ? Omit<T, K> 
     : never
 ```
+
+
+## `as const`
+
+通常使用一个 `const` 定义常量之后,
+我们希望使用这个常量对象来获取他的值
+
+例如: 
+
+```typescript
+const routes = {
+    home: '/',
+    about: '/'
+}
+
+const goToRoute = (route: "/" | "/about") => {};
+
+```
+
+但是这是当我们想要使用 `goToRoute(routes.admin)` 时, 就会报错,
+因为 `routes.admin` 的类型是 `string`.
+
+### 为什么会这样呢?
+
+因为 `routes` 是一个 `const` , 但是 `routes.admin` 是可以修改.  
+
+
+可以使用
+
+```typescript
+const goToRoute = (route: keyof routes) => {};
+```
+
+### 解决方式
+就是使用 `as const`
+
+```typescript
+const routes = {
+    home: '/',
+    about: '/'
+} as const
+```
+
+这样就可以使用 `goToRoute(routes.admin)` 了
