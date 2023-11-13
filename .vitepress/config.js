@@ -55,7 +55,10 @@ export default defineConfig({
         {
           text: 'Vue',
           items: [
-            { text: 'Ref', link: '/vue/ref-and-reactive.md' }
+            { text: 'Ref', link: '/vue/ref-and-reactive.md' },
+            { text: 'shallowRef', link: '/vue/shallowRef.md' },
+            { text: 'fetch', link: '/vue/use-fetch.md' },
+            { text: 'What\'s new in 3.3', link: '/vue/ref-and-reactive.md' }
           ]
         },
         {
