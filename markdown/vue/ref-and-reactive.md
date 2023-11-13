@@ -18,7 +18,7 @@ console.log(users.value)
 
 统一使用`ref`操作可以降低这种心智负担.(虽然我不喜欢`.value`的操作)
 1. 显示调用, 有明确的类型检查.
-2. 想必`reactive`的局限更少
+2. 相比`reactive`的局限更少
 
 ## 如何解决呢?
 
@@ -63,7 +63,7 @@ user.name // zhangsan
 这个在业务组件用到的不太多,  功能性组件更多一点.
 因为可以在接收到一个未知类型的数据时候, 直接`unref(whatEverThisIs)`
 
-大概得实现就是
+大概的实现就是
 ```typescript
 function unref<T>(r: Ref<T> | T): T {
   return isRef(r) ? r.value : r
