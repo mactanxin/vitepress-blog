@@ -4,10 +4,12 @@
 只有只管的对  `.value` 进行更新, 才会触发更新.
 
 ```vue
+<script setup>
 import { shallowRef } from 'vue'
 const state = shallowRef({count : 1})
 
 state.value.count = 2; //不会触发更改
 
 state.value = { count : 2 } // 会触发
+</script>
 ```
