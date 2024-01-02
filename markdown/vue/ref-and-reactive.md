@@ -17,6 +17,9 @@ console.log(users.value)
 主要原因是如果在开发过程中存在大量的`ref` 与 `reactive` 和 普通js对象并行, 就会加重"我现在操作的是否是ref对象"的心智负担.  
 
 统一使用`ref`操作可以降低这种心智负担.(虽然我不喜欢`.value`的操作)
+
+优点: 
+
 1. 显示调用, 有明确的类型检查.
 2. 相比`reactive`的局限更少
 
@@ -150,3 +153,36 @@ mouse.x === x.value
 </script>
 
 ```
+
+## 接收`ref` 作为函数参数
+
+通常实现的函数:
+
+```typescript
+function add(a: number, b: number) {
+  return a + b
+}
+```
+
+结果不会触发响应式更新
+
+
+
+在 `Vue` 中可以接收 `ref` 类型, 返回一个响应式结果
+
+```typescript
+function add(a: Ref<number>, b: Ref<number>) {
+  return computed(() => a.value + b.value)
+}
+```
+
+当 `a` 或 `b` 的数值发生变化时, 会自动触发响应式更新
+
+```javascript
+const a = ref(1)
+const b = ref(2)
+
+let c = add(a, b)
+```
+
+这时的 `c` 已经不在单纯的是一个固定的值, 而是一个响应式的表达式了
