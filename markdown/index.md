@@ -27,7 +27,7 @@ features:
     link: /vue/
     details: Vue, ref, reactive and more
   - icon: 
-      src: ./2023.avif
+      src: ./2024.jpeg
     title: Archives
     link: /archives/
     details: 🚀 Everything else
