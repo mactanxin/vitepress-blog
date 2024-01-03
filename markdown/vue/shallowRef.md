@@ -8,8 +8,41 @@
 import { shallowRef } from 'vue'
 const state = shallowRef({count : 1})
 
+// no deep reactivity
+// better performance
 state.value.count = 2; //不会触发更改
 
 state.value = { count : 2 } // 会触发
 </script>
 ```
+
+
+
+同理, 可以使用 `shallowRef` 创建一个 `signal`
+
+
+
+```vue
+<script setup>
+  import { shallowRef, triggerRef } from 'vue'
+  
+  export const createSignal(value, options) {
+    // create a reactive reference of value
+    const r = shallowRef(value)
+    
+    // getter
+    const get = () => r.value
+    
+    // setter takes any value in
+    const set = (v) => {
+      // if setter is a function, evoke the function
+      // otherwise set value
+      r.value = typeof v === 'function' ? v(r.value) : v
+      if (options.equals === false) triggerRef(r)
+    }
+    
+    return [get, set]
+  }
+</script>
+```
+
