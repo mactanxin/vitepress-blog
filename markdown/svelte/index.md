@@ -1,5 +1,15 @@
 # svelte & sveltekit
 
+## Svelte 5(preview) & SK2
+
+It's time to update to `sk2`
+
+🚧🚧🚧
+
+
+
+## 2023
+
 一些关于使用`sveltekit`实际开发中总结的内容.  
 [项目源码在这里](https://github.com/mactanxin/sveltekit-dummyjson-demo)
 
