@@ -25,7 +25,7 @@ features:
       src: ./vue-logo.png
     title: Vue 
     link: /vue/
-    details: Vue, ref, reactive and more
+    details: Vue, Nuxt, ref, reactive and more
   - icon: 
       src: ./2024.jpeg
     title: Archives
