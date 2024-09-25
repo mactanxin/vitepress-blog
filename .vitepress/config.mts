@@ -1,26 +1,9 @@
-import { createContentLoader, defineConfig } from 'vitepress'
-import { SitemapStream } from 'sitemap'
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
+import { defineConfig } from 'vitepress'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lastUpdated: true,
-  head: [
-    [
-      'script',
-      {
-        async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-85K7LK4QKE'
-      }
-    ],
-    [
-      'script',
-      {},
-      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-85K7LK4QKE');"
-    ]
-  ],
   title: "Xin's Blog",
-  description: "Xin's blog, focus on Vue, Svelte, Tailwind CSS",
+  description: "Xin's blog, Vue, Nuxt, Svelte, Tailwind CSS",
   srcDir: './markdown',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -30,6 +13,15 @@ export default defineConfig({
       { text: 'About', link: '/about-me' }
     ],
 
+    // sidebar: [
+    //   {
+    //     text: 'Examples',
+    //     items: [
+    //       { text: 'Markdown Examples', link: '/markdown-examples' },
+    //       { text: 'Runtime API Examples', link: '/api-examples' }
+    //     ]
+    //   }
+    // ],
     sidebar: {
       '/svelte/': [
         {
@@ -89,27 +81,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mactanxin/vitepress-blog' }
     ],
-
     footer: {
       message: 'Made with ❤️  by Xin',
       copyright: 'Copyright © 2019-present <a href="https://github.com/mactanxin">Xin</a>'
     }
-  },
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://tanx.in/' })
-    const pages = await createContentLoader('*.md').load()
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-
-    sitemap.pipe(writeStream)
-    pages.forEach((page) => sitemap.write(
-      page.url
-        // Strip `index.html` from URL
-        .replace(/index$/g, '')
-      // Optional: if Markdown files are located in a subfolder
-      // .replace(/^\/docs/, '')
-    ))
-    sitemap.end()
-
-    await new Promise((r) => writeStream.on('finish', r))
   }
 })
