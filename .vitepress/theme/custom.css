@@ -1,0 +1,23 @@
+:root {
+  --vp-c-white: #fff;
+  --vp-c-black: #000;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+
+  --vp-c-text-1: #020617;
+  /* text-slate-950 */
+  --vp-button-brand-bg: var(--vp-c-black);
+
+  --vp-c-indigo-1: #020617;
+  --vp-c-indigo-2: #1e293b;
+  --vp-c-indigo-3: #475569;
+  --vp-c-indigo-soft: #64748b;
+}
+
+.dark {
+  --vp-c-bg: #09090B;
+  --vp-c-text-1: #f8fafc;
+  /* text-slate-50 */
+  --vp-c-indigo-1: #f8fafc;
+  --vp-button-brand-bg: var(--vp-c-indigo-2);
+}
