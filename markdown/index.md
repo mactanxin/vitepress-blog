@@ -21,6 +21,11 @@ features:
     title: Svelte
     link: /svelte/
     details: Sveltekit in real life experiences
+  - icon:
+      src: ./ts-logo.png
+    title: TS
+    link: /typescript/
+    details: Typescript
   - icon: 
       src: ./vue-logo.png
     title: Vue 

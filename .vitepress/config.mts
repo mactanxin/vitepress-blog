@@ -8,8 +8,9 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Svelte', link: '/svelte/' },
+      // { text: 'Home', link: '/' },
+      // { text: 'Vue', link: '/vue/' },
+      // { text: 'Svelte', link: '/svelte/' },
       { text: 'About', link: '/about-me' }
     ],
 
@@ -40,6 +41,7 @@ export default defineConfig({
           items: [
             { text: 'Vue', link: '/vue/' },
             { text: '归档', link: '/archives/' },
+            { text: 'TypeScript', link: '/typescript/' },
           ]
         },
       ],
@@ -58,6 +60,7 @@ export default defineConfig({
           items: [
             { text: 'Svelte', link: '/svelte/' },
             { text: '归档', link: '/archives/' },
+            { text: 'TypeScript', link: '/typescript/' },
           ]
         },
 
@@ -74,8 +77,30 @@ export default defineConfig({
           items: [
             { text: 'Svelte', link: '/svelte/' },
             { text: 'Vue', link: '/vue/' },
+            { text: 'TypeScript', link: '/typescript/' },
           ]
         }
+      ],
+      '/typescript/': [
+        {
+          text: 'TypeScript',
+          items: [
+            { text: '索引', link: '/typescript'},
+            { text: '实战小技巧', link: '/typescript/TS-in-reallife' },
+            { text: 'Advanced TS', link: '/typescript/Advanced-TypeScript-Exercises' },
+            { text: 'Using 关键字', link: '/typescript/using-keyword' },
+            { text: 'TS 体操', link: '/typescript/TS-Challenge' },
+          ]
+        },
+        {
+          text: '其他',
+          items: [
+            { text: 'Svelte', link: '/svelte/' },
+            { text: 'Vue', link: '/vue/' },
+            { text: '索引', link: '/archives/' },
+          ]
+        }
+
       ]
     },
     socialLinks: [

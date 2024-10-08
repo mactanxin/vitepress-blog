@@ -1,14 +1,6 @@
 # 历史归档
 [CSS 小属性办大事](./content-visibility.md)
 
-[Advanced TS P1](./Advanced-TypeScript-Exercises.md)
-
-[Introducing using in TypeScript 5.2](./using-keyword.md)
-
-[实战中总结的TS小技巧 Part 1](./TS-in-reallife.md)
-
-[TypeScript 体操](./TS-Challenge.md)
-
 [ChatGPT开发效率小工具](./chatgpt-at-work)
 
 [Partial keyframes are not supported in vuetify 3](./partial-keyframes-are-not-supported)
