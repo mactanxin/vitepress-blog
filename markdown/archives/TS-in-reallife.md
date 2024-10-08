@@ -1,10 +1,61 @@
-# 一些在实战中总计的TS小技巧
+# 一些在实战中总结的TS小技巧
 
-1. Union type 绑定关系
-通过使用 `Union` 类型来绑定关系,
-例如:
-在开发中,
-遇到某些需要根据同级别其他属性的类型来绑定属性类型时,
+1. 使用TS帮助获取对象的值
+
+  在定义页面路由时, 可能会遇到这种情况:
+
+  ```typescript
+  interface FileRoutesByPath {
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+    };
+    "/about": {
+      id: "/about";
+      path: "/about";
+      fullPath: "/about";
+    };
+  }
+  ```
+
+  路由的数据是这种数据类型, 但是我们在页面上会更改数据结构, 使用其中的部分内容, 例如:
+
+  ```js
+  {
+    title: '/about',
+    to: '/about'
+  }
+  ```
+
+  此时我只想要根据前面的 `fullPath` 字段的值赋给 `to` 字段, 使用TS可以推导这个字段的值
+
+  ```typescript
+  type Menu<T> = T[keyof T] extends {fullPath: infer U} ? {
+    title: string
+    to: U
+  }[] : never	
+  
+  
+  const menuT: MenuT<FileRoutesByPath> = [
+    {
+      title: '/',
+      to: '/'
+    },
+    {
+      title: '/about',
+      to: '' // <- 此时的to字段, 在编辑器里就会自动提示出所有fullPath的值
+    }
+  ]
+  ```
+
+  
+
+2. Union type 绑定关系
+  通过使用 `Union` 类型来绑定关系,
+  例如:
+  在开发中,
+  遇到某些需要根据同级别其他属性的类型来绑定属性类型时,
 ```typescript
 type Person = {
     name: string;
