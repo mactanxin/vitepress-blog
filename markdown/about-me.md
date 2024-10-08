@@ -22,5 +22,5 @@ Personal hobby: [Svelte](https://svelte.dev) + [Sveltekit](https://kit.svelte.de
 ### Styling
 
 [TailwindCSS](https://tailwindcss.com) for styling
-
+[ShadCN] (https://shadcn.com) 💚💚💚
 
