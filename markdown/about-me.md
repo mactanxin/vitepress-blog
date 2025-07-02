@@ -1,6 +1,6 @@
 # Hello There 👋
 
-🚧 new blog in progress. 
+🚧 new blog in progress.
 
 ## Why am I working on this?
 
@@ -9,11 +9,13 @@ I often spend many hours solving a complex problem and have a terrible habit of 
 ## Tech Stack
 
 ### Framework
-Daily job: [Vue 3](https://vuejs.org) + [Nuxt 3](https://nuxt.com) + [Vite](https://vitejs.dev) 
+
+Daily job: [Vue 3](https://vuejs.org) + [Nuxt 3](https://nuxt.com) + [Vite](https://vitejs.dev)
+Also with: [NextJS](https://nextjs.org)
 
 Personal hobby: [Svelte](https://svelte.dev) + [Sveltekit](https://kit.svelte.dev) + [Vite](https://vitejs.dev)
 
-### DB:
+### DB
 
 [Firebase](https://firebase.google.com) and [Supabase](https://supabase.com)
 
@@ -22,5 +24,4 @@ Personal hobby: [Svelte](https://svelte.dev) + [Sveltekit](https://kit.svelte.de
 ### Styling
 
 [TailwindCSS](https://tailwindcss.com) for styling
-[ShadCN] (https://shadcn.com) 💚💚💚
-
+[ShadCN] (<https://shadcn.com>) 💚💚💚
